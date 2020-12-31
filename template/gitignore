@@ -23,3 +23,12 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintcache
+
+
+.idea/shelf/
+.idea/workspace.xml
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/httpRequests/
+.idea/*.iml
+.idea/modules.xml
