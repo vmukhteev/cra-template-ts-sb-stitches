@@ -1,7 +1,14 @@
 {
-  "name": "cra-template-muvr",
-  "version": "0.1.0",
-  "private": true,
+  "name": "cra-template-ts-sb-stitches",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Vyacheslav Muchteev <vmukhteev@yandex.ru>",
+  "engines": {
+    "node": ">=12"
+  },
+  "main": "template.json",
+  "files": ["template", "template.json"],
+  "description": "A quick start Create React App template with TypeScript, Stitches, Storybook and custom ESlint configurations",
   "dependencies": {
     "@stitches/react": "0.0.3-canary.4",
     "@testing-library/jest-dom": "^5.11.8",
@@ -31,7 +38,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean-files": "rm -rf ./template/public ./template/src",
+    "copy-files": "cp -a ./src/. template/src && cp -a ./public/. template/public",
+    "prepublishOnly": "npm clean-files && npm copy-files"
   },
   "eslintConfig": {
     "extends": [
