@@ -1,13 +1,16 @@
 {
   "name": "cra-template-ts-sb-stitches",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Vyacheslav Muchteev <vmukhteev@yandex.ru>",
   "engines": {
     "node": ">=12"
   },
   "main": "template.json",
-  "files": ["template", "template.json"],
+  "files": [
+    "template",
+    "template.json"
+  ],
   "description": "A quick start Create React App template with TypeScript, Stitches, Storybook and custom ESlint configurations",
   "dependencies": {
     "@stitches/react": "0.0.3-canary.4",
@@ -38,7 +41,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -74,5 +79,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/node-logger": "^6.1.11",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.11"
   }
 }
